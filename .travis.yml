@@ -3,7 +3,7 @@ language: csharp
 mono: latest
 
 install:
- - choco install dotnetcore-sdk
- - dotnet restore
+# - choco install dotnetcore-sdk
+  - msbuild /t:Restore
 script:
- - dotnet build ./MintPlayer.UpdateDialog/MintPlayer.UpdateDialog.csproj --configuration Release
+ - msbuild ./MintPlayer.UpdateDialog/MintPlayer.UpdateDialog.csproj /t:Build /p:Configuration=Release
