@@ -1,6 +1,6 @@
-os: windows
 language: csharp
-#mono: latest
+mono: latest
+dotnet: 3.1.200
 
 install:
 # - choco install dotnetcore-sdk
