@@ -1,14 +1,8 @@
-﻿using MintPlayer.UpdateDialog.Extensions;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.ComponentModel;
-using System.Data;
 using System.Deployment.Application;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using MintPlayer.UpdateDialog.Extensions;
 
 namespace MintPlayer.UpdateDialog
 {
@@ -23,10 +17,11 @@ namespace MintPlayer.UpdateDialog
             }
             catch (Exception)
             {
+                // During development, there is no deployment
             }
         }
 
-        private ApplicationDeployment deployment;
+        private readonly ApplicationDeployment deployment;
         private string previousGroup;
         private DeploymentProgressState? previousState = null;
 
@@ -174,9 +169,13 @@ namespace MintPlayer.UpdateDialog
             };
 
             if (InvokeRequired)
+            {
                 Invoke(action);
+            }
             else
+            {
                 action();
+            }
         }
     }
 }

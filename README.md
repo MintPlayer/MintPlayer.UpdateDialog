@@ -6,5 +6,3 @@
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/3b144e11dea14781a9b67a4bfd171c29)](https://www.codacy.com/gh/MintPlayer/MintPlayer.UpdateDialog?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=MintPlayer/MintPlayer.UpdateDialog&amp;utm_campaign=Badge_Grade)
 
 Dialog to update your ClickOnce application (Only .NET Framework)
-## NuGet package
-https://www.nuget.org/packages/MintPlayer.NetFramework.UpdateDialog/
